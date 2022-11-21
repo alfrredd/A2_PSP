@@ -84,7 +84,7 @@ public class A2VideojuegosApplication implements CommandLineRunner{
 		    	System.out.println("Escriba el nuevo nombre");
 		    	sc.nextLine();
 		    	nombre = sc.nextLine();
-		    	System.out.println("Escriba la nueva compaÃ±ia");
+		    	System.out.println("Escriba la nueva empresa");
 		    	empresa = sc.nextLine();
 		    	System.out.println("Escriba la nueva nota");
 		    	nota = sc.nextInt();
