@@ -71,17 +71,11 @@ public class SPVideojuego {
 		}
 	}
 	
-	public List<Videojuego> listar(String nombre){
-		String queryParams = "";		
-		if(nombre != null) {
-			queryParams += "?nombre=" + nombre;
-		}
-		
-		try {
-			ResponseEntity<Videojuego[]> response =
-					  restTemplate.getForEntity(URL + queryParams,Videojuego[].class);
-			Videojuego[] arrayPersonas = response.getBody();
-			return Arrays.asList(arrayPersonas);
+	public List<Videojuego> listar(){
+			try {
+				ResponseEntity<Videojuego[]> re =restTemplate.getForEntity(URL, Videojuego[].class);
+				Videojuego[] arrayVideojuegos = re.getBody();
+				return Arrays.asList(arrayVideojuegos);
 		} catch (HttpClientErrorException e) {
 			System.out.println("(listar) -> Error al obtener la lista de Videojuegos");
 		    System.out.println("(listar) -> Codigo de respuesta: " + e.getStatusCode());

@@ -103,7 +103,7 @@ public class A2VideojuegosApplication implements CommandLineRunner{
 		    	System.out.println(videojuego);
 			     break;
 		    case 5:
-		    	List<Videojuego> listaVideojuegos = spv.listar(null);
+		    	List<Videojuego> listaVideojuegos = spv.listar();
 		    	listaVideojuegos.forEach((v) -> System.out.println(v));
 			     break;
 		    case 6:
